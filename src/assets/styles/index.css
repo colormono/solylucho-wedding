@@ -1,0 +1,380 @@
+/*
+  gray: #5b5b5f;
+  black: #2c2c2c;
+  beige: #f9f4e8;
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 14px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9f4e8;
+  background-repeat: no-repeat;
+  color: #5b5b5f;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  margin: 0px auto;
+  font-weight: 600;
+}
+
+p,
+em {
+  max-width: 520px;
+  margin: 1em auto;
+}
+
+a {
+  text-decoration: none;
+  color: #2c2c2c;
+  transition: all 0.3s ease-in-out;
+}
+
+.current a,
+a:hover {
+  text-decoration: none;
+  color: #c8962c;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  z-index: 20;
+  overflow-x: hidden;
+}
+
+.logo {
+  text-align: center;
+  width: 33vw;
+  max-width: 160px;
+  margin: 0.5em auto 0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0px;
+  margin: 0px 1em;
+  text-transform: uppercase;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav li {
+  padding: 0.5em;
+}
+
+nav a {
+  padding: 0.5em;
+}
+
+main {
+  position: relative;
+  max-width: 920px;
+  margin: 0px auto;
+}
+
+.button {
+  border: none;
+  font-size: 16px;
+  padding: 0.3em 1em;
+  border-radius: 6px;
+  background-color: #2c2c2c;
+  color: #f9f4e8;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  font-family: 'Sorts Mill Goudy', serif;
+}
+
+.button:hover {
+  background-color: #c8962c;
+  color: #2c2c2c;
+  text-decoration: none;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  margin: 0px auto;
+  padding: 0px;
+}
+
+.polaroid {
+  position: relative;
+  background: #f5f5f5;
+  border: 6px solid white;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  line-height: 0;
+  display: block;
+  max-width: 100%;
+  margin: 0px auto;
+  transform: rotate(-1.5deg);
+}
+
+section {
+  text-align: center;
+  width: 100%;
+  padding: 1em 2em;
+  margin-bottom: 1em;
+}
+
+.section-bienvenidos {
+  font-size: 1.25em;
+}
+
+.section-asistencia {
+  margin-top: 1em;
+}
+
+.section-asistencia h4 {
+  color: #c8962c;
+}
+
+form {
+  padding: 0.5em 1em;
+}
+
+input,
+select {
+  border: none;
+  padding: 0.5em;
+  margin: 0.75em;
+  background: white;
+  border-radius: 4px;
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: #666;
+}
+
+.error {
+  display: block;
+  font-size: 0.8em;
+  color: #c8962c;
+  margin-top: -8px;
+}
+
+.bg {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: 10;
+  background-repeat: no-repeat;
+}
+
+.bg-left {
+  background-image: url(../images/bg-left.png);
+  background-position: top left;
+  background-size: 30%;
+}
+
+.bg-right {
+  background-image: url(../images/bg-right.png);
+  background-position: bottom right;
+  background-size: 30%;
+}
+
+.anillos {
+  position: relative;
+}
+
+.anillo {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 240px;
+  display: block;
+}
+
+/* Mobile */
+
+@media (max-width: 720px) {
+  section .icono {
+    max-width: 100px;
+  }
+
+  .section-bienvenidos strong {
+    display: block;
+  }
+
+  .section-bienvenidos br {
+    display: none;
+  }
+
+  .polaroid {
+    border: 3px solid white;
+  }
+}
+
+/* Desktop */
+
+@media (min-width: 720px) {
+  body {
+    font-size: 20px;
+  }
+
+  nav {
+    font-size: 16px;
+  }
+
+  .anillo {
+    top: 50vh;
+    left: 50vw;
+    right: auto;
+    width: 133vh;
+  }
+}
+
+/* Animations */
+.anillo-1 {
+  -webkit-animation: anillo-spin-1 infinite 200s linear;
+  animation: anillo-spin-1 infinite 200s linear;
+  z-index: 1;
+}
+.anillo-2 {
+  -webkit-animation: anillo-spin-2 infinite 150s linear;
+  animation: anillo-spin-2 infinite 150s linear;
+  z-index: 2;
+}
+.anillo-3 {
+  -webkit-animation: anillo-spin-1 infinite 120s linear;
+  animation: anillo-spin-1 infinite 120s linear;
+  z-index: 3;
+}
+
+@keyframes anillo-spin-1 {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    -ms-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    -ms-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes anillo-spin-2 {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    -ms-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    -ms-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+.respuesta {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.respuesta span {
+  font-size: 48px;
+}
+
+/* Spinner */
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 2em;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #c8962c;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+.Modal {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 10px #5b5b5f;
+  z-index: 1001;
+  padding: 2em 1em;
+  text-align: center;
+  outline: none;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 1000;
+}

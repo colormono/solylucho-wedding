@@ -1,4 +1,13 @@
+# Sol y Lucho
+
+### Wedding website
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Resources
+
+- [Page transitions with framer](https://blog.sethcorker.com/page-transitions-in-react-router-with-framer-motion/)
+- [Store HTML form submissions in Google Sheets](https://github.com/jamiewilson/form-to-google-sheets)
 
 ## Available Scripts
 
