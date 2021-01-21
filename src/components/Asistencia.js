@@ -44,7 +44,7 @@ export default () => {
       <section className="section-asistencia">
         <h3>¡Nos encantaría que nos acompañes!</h3>
         <p>
-          Por favor, te pedimos que nos confirmes tu asistencia antes del <strong>miércoles 29 de Enero</strong>.
+          Por favor, te pedimos que nos confirmes tu asistencia <strong>antes del viernes 29 de Enero</strong>.
         </p>
 
         <form onSubmit={handleSubmit(onSubmit)}>
