@@ -4,8 +4,7 @@ import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import icono from '../assets/images/icon-asistencia.svg';
 
-const scriptURL =
-  'https://script.google.com/macros/s/AKfycbz-8cplbhBva7CvSzi1qK9ViXt2oj69Saaw9Xld9RjoX4ED7RHl/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbz-8cplbhBva7CvSzi1qK9ViXt2oj69Saaw9Xld9RjoX4ED7RHl/exec';
 
 export default () => {
   const { register, handleSubmit, errors } = useForm();
@@ -20,7 +19,7 @@ export default () => {
     return () => clearTimeout(timer);
   };
 
-  const onSubmit = async formValues => {
+  const onSubmit = async (formValues) => {
     console.log(formValues);
     setSending(true);
     setData(false);
@@ -45,8 +44,7 @@ export default () => {
       <section className="section-asistencia">
         <h3>¡Nos encantaría que nos acompañes!</h3>
         <p>
-          Por favor, te pedimos que nos confirmes tu asistencia antes del{' '}
-          <strong>miércoles 12 de Agosto</strong>.
+          Por favor, te pedimos que nos confirmes tu asistencia antes del <strong>miércoles 29 de Enero</strong>.
         </p>
 
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -84,34 +82,15 @@ export default () => {
           {!sending && !data ? (
             <div>
               <div>
-                <input
-                  name="nombre"
-                  placeholder="Nombre y Apellido"
-                  ref={register({ required: true })}
-                />
-                {errors.nombre && (
-                  <span className="error">Porfa, decinos tu nombre!</span>
-                )}
+                <input name="nombre" placeholder="Nombre y Apellido" ref={register({ required: true })} />
+                {errors.nombre && <span className="error">Porfa, decinos tu nombre!</span>}
               </div>
 
               <div>
-                <input
-                  type="radio"
-                  name="asistencia"
-                  value="si"
-                  ref={register}
-                  id="si"
-                  defaultChecked
-                />
+                <input type="radio" name="asistencia" value="si" ref={register} id="si" defaultChecked />
                 <label for="si">Asistiré</label>
 
-                <input
-                  type="radio"
-                  name="asistencia"
-                  value="no"
-                  id="no"
-                  ref={register}
-                />
+                <input type="radio" name="asistencia" value="no" id="no" ref={register} />
                 <label for="no">No podré asistir</label>
               </div>
 
