@@ -12,7 +12,7 @@ export default () => {
 
         <h1>Civil</h1>
 
-        <h3>MIÉROCLES 10 de Febrero.</h3>
+        <h3>MIÉRCOLES 10 de Febrero.</h3>
 
         {/* <p>
           <a
