@@ -12,7 +12,7 @@ export default () => {
           <img src={iconoFiesta} className="icono icono-ceremonia" alt="Fiesta" />
         </figure>
 
-        <h3>SABADO 13 de Febrero, Horario a Confirmar.</h3>
+        <h3>SABADO 13 de Febrero, 17 a 01 hs.</h3>
 
         <p>
           <em>Allegra Espacio Multieventos</em>
