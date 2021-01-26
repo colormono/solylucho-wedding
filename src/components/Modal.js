@@ -20,7 +20,7 @@ const CustomModal = () => {
         Save the <em>new</em> date{' '}
       </h2>
       <p>Querida familia y amigos, con mucha responsabilidad decidimos posponer nuestra fiesta de casamiento para el día:</p>
-      <h3>Sábado 13 de Febrero</h3>
+      <h3>SABADO 13 de Febrero, 17 a 01 hs.</h3>
       <p>Lamentamos los inconvenientes y agradecemos que nos entiendan en esta circunstancia tan especial.</p>
       <p>
         Los esperamos!
